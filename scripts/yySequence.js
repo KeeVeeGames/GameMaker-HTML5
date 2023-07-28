@@ -3548,6 +3548,25 @@ yySequenceManager.prototype.FindSequence = function (_name) {
 
 // #############################################################################################
 /// Function:<summary>
+///             Finds the index of the given Sequence
+///          </summary>
+///
+/// In:		 <param name="_seq">Sequence</param>
+// #############################################################################################
+yySequenceManager.prototype.FindSequenceID = function (_seq)
+{
+    for (var i = 0; i < this.Sequences.length; i++)
+    {
+        if (this.Sequences[i] == _seq)
+        {
+            return i;
+        }
+    }
+    return -1;
+};
+
+// #############################################################################################
+/// Function:<summary>
 ///             Create and return a new CSequenceInstance
 ///          </summary>
 ///
