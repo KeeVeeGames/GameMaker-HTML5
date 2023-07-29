@@ -2463,8 +2463,8 @@ function yyKeyframe(_type, _pStorage) {
                     this.m_channels = {};
                     for(var channelIndex = 0; channelIndex < _val.length; channelIndex++)
                     {
-                        var key = _val[channelIndex].m_channel;
-                        this.m_channels[key] = _val[channelIndex];
+                        _val[channelIndex].key = channelIndex.toString();
+                        this.m_channels[channelIndex] = _val[channelIndex];
                     }
                 }
                 else
